@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here. Versions follow Semantic Versioning.
 
+## [1.0.1] - 2026-07-14
+
+### Fixed
+
+- Added a release ZIP package with a valid `agu-writing/` skill root for direct download and installation.
+- Clarified the required extracted directory structure and updated all installation commands after the repository rename.
+
 ## [1.0.0] - 2026-07-14
 
 ### Added
