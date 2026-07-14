@@ -10,30 +10,9 @@ Its central rule is simple: write from the author's evidence. The skill preserve
 - 标题、摘要、Key Points 和 Plain Language Summary
 - Introduction、Data、Methods、Results、Discussion 和 Conclusions
 - 图注、Open Research 声明与投稿合规检查
-- 论点—证据、因果关系、竞争性解释和术语审查
+- 论点—证据、因果关系、解释和术语审查
 - AGU Advances、GRL、JGR: Space Physics、Space Weather、Earth and Space Science、Radio Science 与通用 AGU 写作
 
-## 仓库结构
-
-```text
-agu-writing/
-├── README.md
-├── CHANGELOG.md
-├── LICENSE
-├── SKILL.md
-├── agents/
-│   └── openai.yaml
-└── references/
-    ├── agu-compliance.md
-    ├── claim-evidence-review.md
-    ├── examples-front-matter.md
-    ├── examples-study-design.md
-    ├── examples-main-text.md
-    ├── examples-figures-open-research.md
-    ├── journal-modes.md
-    ├── section-templates.md
-    └── space-physics-style.md
-```
 
 ## 安装
 
@@ -114,27 +93,7 @@ mkdir -p ~/.config/opencode/skills
 git clone --depth 1 --branch v1.0.0 https://github.com/luckidd/agu-writing.git ~/.config/opencode/skills/agu-writing
 ```
 
-项目级目录为 `.opencode/skills/agu-writing` 或 `.agents/skills/agu-writing`。
 
-## 使用示例
-
-Codex：
-
-```text
-$agu-writing 将下面的中文摘要改写为 JGR: Space Physics 风格英文。保留全部数值、单位和结论强度，并指出影响科学结论的信息缺口。
-```
-
-Claude Code：
-
-```text
-/agu-writing Audit this Discussion section for unsupported causality, competing explanations, and overgeneralization from a single event.
-```
-
-自动触发式提示：
-
-```text
-Please revise these three Key Points for a GRL submission. Do not introduce claims that are absent from the Results.
-```
 
 ## 兼容性说明
 
