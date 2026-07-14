@@ -1,0 +1,4 @@
+interface:
+  display_name: "AGU Space Physics Writing"
+  short_description: "Draft and audit AGU space physics manuscripts"
+  default_prompt: "Use $agu-writing to draft, translate, revise, or audit this AGU-style space physics manuscript using only my supplied or verified evidence."
