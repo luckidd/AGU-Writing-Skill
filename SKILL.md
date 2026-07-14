@@ -1,7 +1,10 @@
----
-name: agu-writing
-description: Draft, translate, restructure, or audit AGU-style space physics manuscripts covering the Sun, heliosphere, solar wind, magnetosphere, radiation belts, ionosphere, thermosphere, magnetosphere-ionosphere coupling, radio science, and space weather. Use for AGU Advances, Geophysical Research Letters, JGR: Space Physics, Space Weather, Earth and Space Science, Radio Science, or generic AGU writing; Chinese-to-English scientific rewriting; titles, abstracts, Key Points, Plain Language Summaries, manuscript sections, figure captions, claim-evidence review, submission checks, and Open Research statements.
----
+
+# Agu-writing-skill
+
+
+
+description: Draft, translate, restructure, or audit AGU-style space physics manuscripts covering the Sun, heliosphere, solar wind, magnetosphere, radiation belts, ionosphere, thermosphere, magnetosphere-ionosphere coupling, radio science, and space weather. Use for AGU Advances, Geophysical Research Letters, JGR: Space Physics, Space Weather, Earth and Space Science, Radio Science, or generic AGU writing; scientific rewriting; titles, abstracts, Key Points, Plain Language Summaries, manuscript sections, figure captions, claim-evidence review, submission checks, and Open Research statements.
+
 
 # AGU Space Physics Writing
 
