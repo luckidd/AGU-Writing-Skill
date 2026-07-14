@@ -33,12 +33,6 @@ mkdir -p ~/.agents/skills
 git clone --depth 1 --branch v1.0.0 https://github.com/luckidd/agu-writing.git ~/.agents/skills/agu-writing
 ```
 
-Windows PowerShell：
-
-```powershell
-New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
-git clone --depth 1 --branch v1.0.0 https://github.com/luckidd/agu-writing.git "$HOME\.agents\skills\agu-writing"
-```
 
 项目级安装：
 
