@@ -1,109 +1,117 @@
 # AGU Space Physics Writing Skill
 
-`agu-writing` is an Agent Skill for drafting, translating, restructuring, and auditing AGU-style space-physics manuscripts. It supports the Sun, heliosphere, solar wind, magnetosphere, radiation belts, ionosphere, thermosphere, radio science, and space weather.
+`agu-writing` is an Agent Skill for drafting, translating, restructuring, and reviewing AGU-style manuscripts in space physics. It supports research on the Sun, heliosphere, solar wind, magnetosphere, radiation belts, ionosphere, thermosphere, radio science, and space weather.
 
-Its central rule is simple: write from the author's evidence. The skill preserves numbers, units, notation, physical meaning, uncertainty, and claim strength; it never invents observations, mechanisms, references, or repository details.
+Its core principle is simple: **write from the author’s evidence**. The skill preserves numerical values, units, notation, physical meaning, uncertainty, and the strength of scientific claims. It does not invent observations, mechanisms, references, or repository information.
 
-## 功能
+## Features
 
-- 中译英与 AGU 风格科学改写
-- 标题、摘要、Key Points 和 Plain Language Summary
-- Introduction、Data、Methods、Results、Discussion 和 Conclusions
-- 图注、Open Research 声明与投稿合规检查
-- 论点—证据、因果关系、解释和术语审查
-- AGU Advances、GRL、JGR: Space Physics、Space Weather、Earth and Space Science、Radio Science 与通用 AGU 写作
+* Translation and AGU-style scientific editing
+* Titles, abstracts, Key Points, and Plain Language Summaries
+* Introduction, Data, Methods, Results, Discussion, and Conclusions sections
+* Figure captions, Open Research statements, and submission-compliance checks
+* Review of claim–evidence alignment, causal reasoning, interpretation, and terminology
+* Support for AGU Advances, Geophysical Research Letters, JGR: Space Physics, Space Weather, Earth and Space Science, Radio Science, and general AGU writing
 
+## Installation
 
-## 安装
+Before installing any third-party skill, review its `SKILL.md` file and accompanying resources.
 
-安装第三方 skill 前，请先查看 `SKILL.md` 和配套文件。本仓库不包含可执行脚本，也不需要 API key。
+This repository contains no executable scripts and does not require an API key.
 
 ### Codex
 
-Codex 推荐使用共享 Agent Skills 路径 `~/.agents/skills/`。在 Codex 对话中也可以调用内置安装器：
+For Codex, the recommended shared Agent Skills directory is `~/.agents/skills/`.
+
+You can also use the built-in installer from a Codex conversation:
 
 ```text
 Use $skill-installer to install https://github.com/luckidd/agu-writing/tree/v1.0.0
 ```
 
-用户级手动安装：
+User-level installation:
 
 ```bash
 mkdir -p ~/.agents/skills
 git clone --depth 1 --branch v1.0.0 https://github.com/luckidd/agu-writing.git ~/.agents/skills/agu-writing
 ```
 
-
-项目级安装：
+Project-level installation:
 
 ```bash
 mkdir -p .agents/skills
 git clone --depth 1 --branch v1.0.0 https://github.com/luckidd/agu-writing.git .agents/skills/agu-writing
 ```
 
-新建会话后输入 `$agu-writing`，或使用 `/skills` 确认是否已发现。
+After starting a new session, enter `$agu-writing` to invoke the skill, or use `/skills` to confirm that it has been discovered.
 
 ### Claude Code
 
-用户级安装：
+User-level installation:
 
 ```bash
 mkdir -p ~/.claude/skills
 git clone --depth 1 --branch v1.0.0 https://github.com/luckidd/agu-writing.git ~/.claude/skills/agu-writing
 ```
 
-项目级安装：
+Project-level installation:
 
 ```bash
 mkdir -p .claude/skills
 git clone --depth 1 --branch v1.0.0 https://github.com/luckidd/agu-writing.git .claude/skills/agu-writing
 ```
 
-Windows PowerShell 中可将目标目录改为 `$HOME\.claude\skills\agu-writing` 或 `.claude\skills\agu-writing`。安装后输入 `/agu-writing` 显式调用，或让 Claude Code 根据任务自动加载。
+On Windows PowerShell, use `$HOME\.claude\skills\agu-writing` for a user-level installation or `.claude\skills\agu-writing` for a project-level installation.
+
+After installation, enter `/agu-writing` to invoke the skill explicitly, or allow Claude Code to load it automatically when relevant to the task.
 
 ### Gemini CLI
 
-使用 Gemini CLI 自带的安装命令：
+Use the installation command provided by Gemini CLI:
 
 ```bash
 gemini skills install https://github.com/luckidd/agu-writing
 gemini skills list
 ```
 
-仅安装到当前工作区：
+To install the skill only in the current workspace:
 
 ```bash
 gemini skills install https://github.com/luckidd/agu-writing --scope workspace
 ```
 
-如需固定为 `v1.0.0`，使用 `git clone --branch v1.0.0`，并将目标目录设为 `~/.gemini/skills/agu-writing` 或 `.gemini/skills/agu-writing`。
+To pin the installation to `v1.0.0`, use `git clone --branch v1.0.0` and set the destination directory to either `~/.gemini/skills/agu-writing` or `.gemini/skills/agu-writing`.
 
 ### OpenCode
 
-OpenCode 支持共享 `.agents/skills` 路径，因此可复用 Codex 的用户级或项目级安装方式。也可以使用 OpenCode 专用用户目录：
+OpenCode supports the shared `.agents/skills` directory, so you can reuse the Codex user-level or project-level installation instructions.
+
+Alternatively, install the skill in OpenCode’s dedicated user directory:
 
 ```bash
 mkdir -p ~/.config/opencode/skills
 git clone --depth 1 --branch v1.0.0 https://github.com/luckidd/agu-writing.git ~/.config/opencode/skills/agu-writing
 ```
 
+## Compatibility
 
+The core `SKILL.md` file follows the open Agent Skills structure.
 
-## 兼容性说明
+The `agents/openai.yaml` file provides interface metadata for Codex and the ChatGPT desktop app. Other tools can safely ignore this file without affecting the skill’s core functionality.
 
-核心 `SKILL.md` 使用开放的 Agent Skills 结构。`agents/openai.yaml` 为 Codex/ChatGPT 桌面端提供界面元数据；其他工具会忽略该文件，不影响 skill 的核心功能。
+Installation paths are based on the current official documentation for each tool:
 
-安装路径依据各工具的当前官方文档：
+* [Codex Skills](https://developers.openai.com/codex/skills/)
+* [Claude Code Skills](https://code.claude.com/docs/en/skills)
+* [Gemini CLI Agent Skills](https://geminicli.com/docs/cli/using-agent-skills/)
+* [OpenCode Agent Skills](https://opencode.ai/docs/skills/)
 
-- [Codex skills](https://developers.openai.com/codex/skills/)
-- [Claude Code skills](https://code.claude.com/docs/en/skills)
-- [Gemini CLI Agent Skills](https://geminicli.com/docs/cli/using-agent-skills/)
-- [OpenCode Agent Skills](https://opencode.ai/docs/skills/)
+## Version
 
-## 版本
+Current stable release: `v1.0.0`.
 
-当前稳定版本：`v1.0.0`。变更见 [CHANGELOG.md](CHANGELOG.md)。
+See [CHANGELOG.md](CHANGELOG.md) for release notes and version history.
 
 ## License
 
-MIT License. See [LICENSE](LICENSE).
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
