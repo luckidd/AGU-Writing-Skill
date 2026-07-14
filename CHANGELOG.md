@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here. Versions follow Semantic Versioning.
 
+## [1.0.2] - 2026-07-14
+
+### Fixed
+
+- Restored valid YAML frontmatter in `SKILL.md` and standardized the technical skill identifier as `agu-writing-skill`.
+- Aligned the display name, invocation examples, package root, and installation paths with the AGU-Writing-Skill project name.
+- Rewrote the README in English and clarified direct-download and manual-install workflows.
+
 ## [1.0.1] - 2026-07-14
 
 ### Fixed
